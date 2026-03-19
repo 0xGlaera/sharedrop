@@ -1,11 +1,10 @@
 package org.nitish.project.sharedrop
 
 actual class FileSaver {
-    actual fun saveFile(
+    actual fun moveFile(
         fileName: String,
-        bytes: ByteArray,
+        sourcePath: String,
         onResult: (success: Boolean, filePath: String) -> Unit
     ) {
-        onResult(false, "")
     }
 }

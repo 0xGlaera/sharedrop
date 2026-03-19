@@ -12,7 +12,7 @@ actual class FileReceiver {
     actual fun startReceiving(
         port: Int,
         onProgress: (fileName: String, progress: Float) -> Unit,
-        onFileReceived: (absoluteFilePath: String) -> Unit
+        onFileReceived: (fileName : String, tempFilePath: String) -> Unit
     ) {
         Thread {
             try {
@@ -55,7 +55,7 @@ actual class FileReceiver {
                                 }
                             }
 
-                            onFileReceived(tempFile.absolutePath)
+                            onFileReceived(fileName, tempFile.absolutePath)
                             client.close()
                         } catch (e: Exception) {
                             e.printStackTrace()

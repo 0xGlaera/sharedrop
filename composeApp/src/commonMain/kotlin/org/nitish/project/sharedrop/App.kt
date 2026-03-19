@@ -54,8 +54,8 @@ fun HomeScreen() {
                 statusMessage = "Receiving file '$fileName'..."
                 transferProgress = progress
             }
-        }) { filePath ->
-            FileSaver().moveFile(filePath) { success, newPath ->
+        }) { fileName, tempFilePath ->
+            FileSaver().moveFile(fileName, tempFilePath) { success, newPath ->
                 scope.launch(Dispatchers.Main) {
                     if (success) {
                         statusMessage = "Saved file to $newPath"
