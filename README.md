@@ -102,7 +102,7 @@ ShareDrop solves this by:
 | **macOS** (JVM)   |       WIP       |   No  | 
 | **iOS**           |        No       |   No  | 
 
-*(Legend: ✅ = Fully Working & Tested | ⏳ = Work In Progress / Untested |  = Not Supported Yet)*
+*(Legend:  = Fully Working & Tested |  = Work In Progress / Untested |  = Not Supported Yet)*
 
 
 ---
